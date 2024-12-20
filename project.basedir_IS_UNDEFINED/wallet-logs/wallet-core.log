@@ -1,0 +1,171 @@
+2024-12-20 11:34:10,164 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-12-20 11:34:10,214 INFO o.s.b.StartupInfoLogger [main] Starting WalletApplication using Java 17.0.13 with PID 6459 (/home/bs646/Projects/wallet/target/classes started by bs646 in /home/bs646/Projects/wallet)
+2024-12-20 11:34:10,215 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "dev"
+2024-12-20 11:34:10,958 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-20 11:34:11,034 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
+2024-12-20 11:34:11,615 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-12-20 11:34:11,624 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-20 11:34:11,626 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-12-20 11:34:11,626 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-20 11:34:11,669 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-12-20 11:34:11,669 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1410 ms
+2024-12-20 11:34:11,730 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [main] Global AuthenticationManager configured with AuthenticationProvider bean with name markdownAuthProvider
+2024-12-20 11:34:11,885 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-20 11:34:11,940 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-20 11:34:11,969 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-12-20 11:34:12,218 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-20 11:34:12,250 INFO c.z.h.HikariDataSource [main] HikariCP - Starting...
+2024-12-20 11:34:12,450 INFO c.z.h.p.HikariPool [main] HikariCP - Added connection org.postgresql.jdbc.PgConnection@3909a854
+2024-12-20 11:34:12,451 INFO c.z.h.HikariDataSource [main] HikariCP - Start completed.
+2024-12-20 11:34:12,499 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-20 11:34:12,518 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariCP)']
+	Database driver: undefined/unknown
+	Database version: 12.22
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-20 11:34:13,421 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-20 11:34:13,561 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-20 11:34:13,931 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-20 11:34:14,366 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-20 11:34:14,896 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-12-20 11:34:14,909 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path '/api'
+2024-12-20 11:34:14,917 INFO o.s.b.StartupInfoLogger [main] Started WalletApplication in 5.101 seconds (process running for 6.302)
+2024-12-20 11:38:38,023 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-20 11:38:38,023 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-12-20 11:38:38,024 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2024-12-20 11:40:54,175 WARN c.z.h.p.HikariPool$HouseKeeper [HikariCP housekeeper] HikariCP - Thread starvation or clock leap detected (housekeeper delta=2m10s773ms844µs290ns).
+2024-12-20 11:40:54,183 ERROR c.d.w.e.GlobalExceptionHandler [http-nio-8080-exec-2] Caused By: io.jsonwebtoken.security.WeakKeyException: The signing key's size is 472 bits which is not secure enough for the HS512 algorithm.  The JWT JWA Specification (RFC 7518, Section 3.2) states that keys used with HS512 MUST have a size >= 512 bits (the key size must be greater than or equal to the hash output size).  Consider using the io.jsonwebtoken.security.Keys class's 'secretKeyFor(SignatureAlgorithm.HS512)' method to create a key guaranteed to be secure enough for HS512.  See https://tools.ietf.org/html/rfc7518#section-3.2 for more information.
+
+2024-12-20 11:46:47,385 INFO o.s.b.w.e.t.GracefulShutdown [SpringApplicationShutdownHook] Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-20 11:46:47,388 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2024-12-20 11:46:47,392 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-20 11:46:47,396 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariCP - Shutdown initiated...
+2024-12-20 11:46:47,406 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariCP - Shutdown completed.
+2024-12-20 11:47:10,484 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-12-20 11:47:10,525 INFO o.s.b.StartupInfoLogger [main] Starting WalletApplication using Java 17.0.13 with PID 8388 (/home/bs646/Projects/wallet/target/classes started by bs646 in /home/bs646/Projects/wallet)
+2024-12-20 11:47:10,526 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "dev"
+2024-12-20 11:47:11,189 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-20 11:47:11,246 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 50 ms. Found 4 JPA repository interfaces.
+2024-12-20 11:47:11,790 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-12-20 11:47:11,799 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-20 11:47:11,801 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-12-20 11:47:11,801 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-20 11:47:11,842 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-12-20 11:47:11,842 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1276 ms
+2024-12-20 11:47:11,906 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [main] Global AuthenticationManager configured with AuthenticationProvider bean with name markdownAuthProvider
+2024-12-20 11:47:12,049 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-20 11:47:12,087 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-20 11:47:12,110 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-12-20 11:47:12,301 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-20 11:47:12,323 INFO c.z.h.HikariDataSource [main] HikariCP - Starting...
+2024-12-20 11:47:12,505 INFO c.z.h.p.HikariPool [main] HikariCP - Added connection org.postgresql.jdbc.PgConnection@54b2d002
+2024-12-20 11:47:12,507 INFO c.z.h.HikariDataSource [main] HikariCP - Start completed.
+2024-12-20 11:47:12,545 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-20 11:47:12,569 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariCP)']
+	Database driver: undefined/unknown
+	Database version: 12.22
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-20 11:47:13,413 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-20 11:47:13,524 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-20 11:47:13,866 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-20 11:47:14,256 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-20 11:47:14,776 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-12-20 11:47:14,788 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path '/api'
+2024-12-20 11:47:14,796 INFO o.s.b.StartupInfoLogger [main] Started WalletApplication in 4.588 seconds (process running for 5.763)
+2024-12-20 11:47:18,021 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-20 11:47:18,021 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-12-20 11:47:18,022 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2024-12-20 11:48:00,109 WARN c.z.h.p.HikariPool$HouseKeeper [HikariCP housekeeper] HikariCP - Thread starvation or clock leap detected (housekeeper delta=47s502ms710µs545ns).
+2024-12-20 11:53:34,271 INFO o.s.b.w.e.t.GracefulShutdown [SpringApplicationShutdownHook] Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-20 11:53:34,275 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2024-12-20 11:53:34,282 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-20 11:53:34,285 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariCP - Shutdown initiated...
+2024-12-20 11:53:34,297 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariCP - Shutdown completed.
+2024-12-20 11:53:47,794 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-12-20 11:53:47,830 INFO o.s.b.StartupInfoLogger [main] Starting WalletApplication using Java 17.0.13 with PID 9393 (/home/bs646/Projects/wallet/target/classes started by bs646 in /home/bs646/Projects/wallet)
+2024-12-20 11:53:47,831 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "dev"
+2024-12-20 11:53:48,435 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-20 11:53:48,492 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 50 ms. Found 4 JPA repository interfaces.
+2024-12-20 11:53:49,000 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-12-20 11:53:49,009 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-20 11:53:49,011 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-12-20 11:53:49,011 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-20 11:53:49,050 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-12-20 11:53:49,050 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1187 ms
+2024-12-20 11:53:49,105 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [main] Global AuthenticationManager configured with AuthenticationProvider bean with name markdownAuthProvider
+2024-12-20 11:53:49,248 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-20 11:53:49,286 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-20 11:53:49,309 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-12-20 11:53:49,487 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-20 11:53:49,509 INFO c.z.h.HikariDataSource [main] HikariCP - Starting...
+2024-12-20 11:53:49,704 INFO c.z.h.p.HikariPool [main] HikariCP - Added connection org.postgresql.jdbc.PgConnection@3909a854
+2024-12-20 11:53:49,706 INFO c.z.h.HikariDataSource [main] HikariCP - Start completed.
+2024-12-20 11:53:49,739 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-20 11:53:49,754 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariCP)']
+	Database driver: undefined/unknown
+	Database version: 12.22
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-20 11:53:50,586 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-20 11:53:50,710 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-20 11:53:51,050 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-20 11:53:51,468 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-20 11:53:51,982 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-12-20 11:53:51,994 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path '/api'
+2024-12-20 11:53:52,002 INFO o.s.b.StartupInfoLogger [main] Started WalletApplication in 4.509 seconds (process running for 5.68)
+2024-12-20 11:54:01,039 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-20 11:54:01,039 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-12-20 11:54:01,040 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2024-12-20 12:51:40,998 INFO o.s.b.w.e.t.GracefulShutdown [SpringApplicationShutdownHook] Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-20 12:51:41,001 INFO o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2024-12-20 12:51:41,008 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-20 12:51:41,012 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariCP - Shutdown initiated...
+2024-12-20 12:51:41,021 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariCP - Shutdown completed.
+2024-12-20 12:51:52,026 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-12-20 12:51:52,063 INFO o.s.b.StartupInfoLogger [main] Starting WalletApplication using Java 17.0.13 with PID 24451 (/home/bs646/Projects/wallet/target/classes started by bs646 in /home/bs646/Projects/wallet)
+2024-12-20 12:51:52,064 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "dev"
+2024-12-20 12:51:52,701 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-20 12:51:52,759 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+2024-12-20 12:51:53,238 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-12-20 12:51:53,247 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-20 12:51:53,249 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2024-12-20 12:51:53,249 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-20 12:51:53,287 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-12-20 12:51:53,288 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1188 ms
+2024-12-20 12:51:53,343 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [main] Global AuthenticationManager configured with AuthenticationProvider bean with name markdownAuthProvider
+2024-12-20 12:51:53,492 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-20 12:51:53,531 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-20 12:51:53,557 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-12-20 12:51:53,743 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-20 12:51:53,764 INFO c.z.h.HikariDataSource [main] HikariCP - Starting...
+2024-12-20 12:51:53,959 INFO c.z.h.p.HikariPool [main] HikariCP - Added connection org.postgresql.jdbc.PgConnection@3909a854
+2024-12-20 12:51:53,961 INFO c.z.h.HikariDataSource [main] HikariCP - Start completed.
+2024-12-20 12:51:53,994 WARN o.h.e.j.d.i.DialectFactoryImpl [main] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-20 12:51:54,010 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariCP)']
+	Database driver: undefined/unknown
+	Database version: 12.22
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-20 12:51:54,815 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-20 12:51:54,932 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-20 12:51:55,252 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-20 12:51:55,647 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-20 12:51:56,177 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-12-20 12:51:56,193 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path '/api'
+2024-12-20 12:51:56,201 INFO o.s.b.StartupInfoLogger [main] Started WalletApplication in 4.481 seconds (process running for 5.606)
+2024-12-20 12:52:00,418 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-20 12:52:00,418 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-12-20 12:52:00,419 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
